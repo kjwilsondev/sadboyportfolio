@@ -1,0 +1,20 @@
+.post {
+  font-family: Arial;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.post-title {
+  font-weight: bolder;
+  text-align: left;
+}
+
+.post-pic {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* .navbar li:nth-of-type(2) {
+  margin-right: -32px;
+} */
