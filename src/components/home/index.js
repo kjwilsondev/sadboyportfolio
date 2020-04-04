@@ -14,7 +14,8 @@ class Home extends Component {
           title="CORNERSTONE"
           date="19.05.23"
           picture={cornerstone}
-          excerpt={["Cornerstone Brewery", "Thursday, May 23, 2019"]}
+          // excerpt="LAGUNA BAY STUDIOS"
+          // credit="ZOO"
           instagram="https://www.instagram.com/stories/highlights/17862945349403289/"
         />
       </div>

@@ -3,25 +3,35 @@
   width: 66vw;
 }
 
+.post-pic {
+  width: 66vw;
+  /* cursor: pointer; */
+}
+
 .post-title {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: var(--color-offblack);
-  font-size: 16px;
-}
-
-.post-pic {
-  width: 66vw;
-  pointer-events: none;
-}
-
-.post-excerpt {
   margin-top: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--color-offblack);
+}
+
+/* .post-excerpt {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 14px;
   color: var(--color-grey);
-  font-size: 12px;
+}
+
+.post-credit {
+  margin-top: 2px;
+  font-style: italic;
+  font-size: 10px;
+  color: var(--color-grey);
 }
 
 /* .navbar li:nth-of-type(2) {
