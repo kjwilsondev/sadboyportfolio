@@ -18,6 +18,7 @@ class PostNavbar extends Component {
     const { instagram, soundcloud, apple, spotify } = this.props;
 
     let instagramButton = "";
+    let soundcloudButton = "";
 
     if (instagram !== "NONE") {
       instagramButton = (
@@ -27,10 +28,19 @@ class PostNavbar extends Component {
       );
     }
 
+    if (soundcloud !== "NONE") {
+      soundcloudButton = (
+        <a target="_blank" href={soundcloud}>
+          <FontAwesomeIcon className="icon" icon={faSoundcloud} size="2x" />
+        </a>
+      );
+    }
+
     return (
-      <div className="icons">
-        <p>{instagramButton}</p>
-      </div>
+      <ul className="icons">
+        <li>{instagramButton}</li>
+        <li>{soundcloudButton}</li>
+      </ul>
     );
   }
 }
