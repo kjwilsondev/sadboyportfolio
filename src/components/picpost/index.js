@@ -13,15 +13,14 @@ class PicPost extends Component {
     return (
       <div className="post">
         <div className="post-title">
-          <p>{title}</p>
-        </div>
-        <div>
-          <p>{date}</p>
+          <li>{title}</li>
+          <li>{date}</li>
         </div>
         <img src={picture} className="post-pic" />
-        {excerpt.map((line) => {
+        {/* {excerpt.map((line) => {
           return <p>{line}</p>;
-        })}
+        })} */}
+        <p className="post-excerpt">{excerpt}</p>
         <a
           // className="App-link"
           href={instagram}

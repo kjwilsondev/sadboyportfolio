@@ -12,15 +12,6 @@ class Navbar extends Component {
   render() {
     return (
       <ul className="navbar">
-        <li></li>
-        <li>
-          <FontAwesomeIcon
-            className="icon"
-            icon={faSadTear}
-            size="3x"
-            // onClick={() => history.push("/")}
-          />
-        </li>
         <li>
           <FontAwesomeIcon
             className="icon"
@@ -29,6 +20,15 @@ class Navbar extends Component {
             // onClick={() => history.push("/")}
           />
         </li>
+        <li>
+          <FontAwesomeIcon
+            className="icon"
+            icon={faSadTear}
+            size="3x"
+            // onClick={() => history.push("/")}
+          />
+        </li>
+        <li></li>
       </ul>
     );
   }

@@ -1,18 +1,27 @@
 .post {
   font-family: Arial;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
+  width: 66vw;
 }
 
 .post-title {
-  font-weight: bolder;
-  text-align: left;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-offblack);
+  font-size: 16px;
 }
 
 .post-pic {
-  height: 40vmin;
+  width: 66vw;
   pointer-events: none;
+}
+
+.post-excerpt {
+  margin-top: 5px;
+  color: var(--color-grey);
+  font-size: 12px;
 }
 
 /* .navbar li:nth-of-type(2) {
