@@ -20,18 +20,19 @@ class PostNavbar extends Component {
     let instagramButton = "";
     let soundcloudButton = "";
 
-    if (instagram !== "NONE") {
+    if (instagram) {
       instagramButton = (
         <a target="_blank" href={instagram}>
-          <FontAwesomeIcon className="icon" icon={faInstagram} size="2x" />
+          <FontAwesomeIcon className="ico" icon={faInstagram} size="2x" />
         </a>
       );
     }
 
-    if (soundcloud !== "NONE") {
+    console.log(soundcloud);
+    if (soundcloud) {
       soundcloudButton = (
         <a target="_blank" href={soundcloud}>
-          <FontAwesomeIcon className="icon" icon={faSoundcloud} size="2x" />
+          <FontAwesomeIcon className="ico" icon={faSoundcloud} size="2x" />
         </a>
       );
     }

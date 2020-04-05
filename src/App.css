@@ -3,6 +3,18 @@
   --color-offblack: #222222;
   --color-grey: #434343;
 }
+
+/* body::-webkit-scrollbar {
+  width: 0.25px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--color-grey);
+} */
+
 .App {
   text-align: center;
 }
