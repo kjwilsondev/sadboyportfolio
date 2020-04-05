@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import "./styles.css";
 // import "../../modules/font-awesome-4.7.0/css/font-awesome.min.css";
-import {
-  faInstagram,
-  faSoundcloud,
-  faApple,
-  faSpotify,
-} from "@fortawesome/free-brands-svg-icons";
+import faInstagram from "@fortawesome/free-brands-svg-icons";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class PostNavbar extends Component {
@@ -15,10 +11,11 @@ class PostNavbar extends Component {
   }
 
   render() {
-    const { instagram, soundcloud, apple, spotify } = this.props;
+    const { instagram, soundcloud, hyperfollow } = this.props;
 
     let instagramButton = "";
     let soundcloudButton = "";
+    let hyperfollowButton = "";
 
     if (instagram) {
       instagramButton = (

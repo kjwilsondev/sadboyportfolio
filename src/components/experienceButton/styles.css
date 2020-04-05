@@ -1,0 +1,38 @@
+.expbutton {
+  border: 2px solid black;
+  /* padding: 8px 15px; */
+  margin: 15px;
+  margin-bottom: 0px;
+  color: var(--color-black);
+  font-weight: bold;
+  width: 130px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expbutton:hover,
+.expbutton:focus {
+  /* color: white; */
+  /* background-color: var(--color-black); */
+  /* font-weight: bold; */
+}
+
+.icons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* .ico {
+  color: var(--color-black);
+  padding-top: 20%;
+  padding-right: 2px;
+  padding-bottom: 100%;
+} */
