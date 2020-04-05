@@ -5,6 +5,9 @@ import "./styles.css";
 class PicPost extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showPostNavbar: false,
+    };
   }
 
   render() {
@@ -19,8 +22,16 @@ class PicPost extends Component {
             <PostNavbar instagram={instagram} soundcloud={soundcloud} />
           </li> */}
           <li>
-            <img src={picture} className="post-pic" />
-            <PostNavbar instagram={instagram} soundcloud={soundcloud} />
+            <img
+              src={picture}
+              className="post-pic"
+              onClick={() =>
+                this.setState({ showPostNavbar: !this.state.showPostNavbar })
+              }
+            />
+            {this.state.showPostNavbar ? (
+              <PostNavbar instagram={instagram} soundcloud={soundcloud} />
+            ) : null}
           </li>
         </ul>
         <div className="post-title">
