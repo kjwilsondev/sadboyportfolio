@@ -20,7 +20,7 @@ class Home extends Component {
           instagram="https://www.instagram.com/stories/highlights/17862945349403289/"
         />
         <PicPost
-          title="WHEN THE STARS DONT ALIGN"
+          title="THE STARS DONT ALIGN"
           date="18.08.16"
           picture={stars}
           // excerpt="SO HOPE FOR THE BEST"

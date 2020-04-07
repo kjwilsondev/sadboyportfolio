@@ -5,15 +5,29 @@ import { faSadTear } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: "",
+    };
+  }
+
   render() {
     return (
       <ul className="navbar">
         <li>
-          <FontAwesomeIcon
-            icon={faBars}
-            size="2x"
-            // onClick={() => history.push("/")}
-          />
+          <div
+            className={`menu-btn ${this.state.open}`}
+            onClick={() => {
+              if (this.state.open === "") {
+                this.setState({ open: "open" });
+              } else {
+                this.setState({ open: "" });
+              }
+            }}
+          >
+            <div class="menu-btn__burger"></div>
+          </div>
         </li>
         <li>
           <FontAwesomeIcon
