@@ -13,35 +13,35 @@ class ExperienceButton extends Component {
   }
 
   render() {
-    // const { instagram, soundcloud, hyperfollow } = this.props;
+    const { instagram, soundcloud, hyperfollow } = this.props;
 
-    // let instagramButton = "";
-    // let soundcloudButton = "";
-    // let hyperfollowButton = "";
+    let instagramButton = "";
+    let soundcloudButton = "";
+    let hyperfollowButton = "";
 
-    // if (instagram) {
-    //   instagramButton = (
-    //     <a target="_blank" href={instagram}>
-    //       <FontAwesomeIcon className="ico" icon={faInstagram} size="2x" />
-    //     </a>
-    //   );
-    // }
+    if (instagram) {
+      instagramButton = (
+        <a target="_blank" href={instagram}>
+          <FontAwesomeIcon className="ico" icon={faInstagram} size="2x" />
+        </a>
+      );
+    }
 
-    // if (soundcloud) {
-    //   soundcloudButton = (
-    //     <a target="_blank" href={soundcloud}>
-    //       <FontAwesomeIcon className="ico" icon={faSoundcloud} size="2x" />
-    //     </a>
-    //   );
-    // }
+    if (soundcloud) {
+      soundcloudButton = (
+        <a target="_blank" href={soundcloud}>
+          <FontAwesomeIcon className="ico" icon={faSoundcloud} size="2x" />
+        </a>
+      );
+    }
 
-    // if (hyperfollow) {
-    //   hyperfollowButton = (
-    //     <a target="_blank" href={hyperfollow}>
-    //       <FontAwesomeIcon className="ico" icon={faMusic} size="2x" />
-    //     </a>
-    //   );
-    // }
+    if (hyperfollow) {
+      hyperfollowButton = (
+        <a target="_blank" href={hyperfollow}>
+          <FontAwesomeIcon className="ico" icon={faMusic} size="2x" />
+        </a>
+      );
+    }
 
     // let content = "EXPERIENCE";
     // if (this.state.showIcons) {
@@ -65,19 +65,13 @@ class ExperienceButton extends Component {
       >
         {this.state.showIcons ? (
           <ul className="icons">
-            <li>i</li>
-            <li>s</li>
-            <li>f</li>
+            <li>{instagramButton}</li>
+            <li>{soundcloudButton}</li>
+            <li>{hyperfollow}</li>
           </ul>
         ) : (
           "EXPERIENCE"
         )}
-        {/* hello */}
-        {/* <ul className="icons">
-          <li>{instagramButton}</li>
-          <li>{soundcloudButton}</li>
-          <li>{hyperfollowButton}</li>
-        </ul> */}
       </div>
     );
   }

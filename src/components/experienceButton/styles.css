@@ -6,7 +6,7 @@
   color: var(--color-black);
   font-weight: bold;
   width: 130px;
-  height: 25px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,9 +31,10 @@
   padding: 0px;
 }
 
-/* .ico {
+.ico {
   color: var(--color-black);
-  padding-top: 20%;
-  padding-right: 2px;
-  padding-bottom: 100%;
-} */
+  /* padding-right: 20px; */
+}
+
+.expbutton .brand-icon {
+}
