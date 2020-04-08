@@ -39,12 +39,12 @@ class ExperienceButton extends Component {
       return (
         <div
           className="expbutton"
-          onMouseOver={(e) => {
-            console.log("PARENT ON MOUSE OVER CALLED");
-            if (!this.state.showIcons) {
-              this.setState({ showIcons: true, firstClick: true });
-            }
-          }}
+          // onMouseOver={(e) => {
+          //   console.log("PARENT ON MOUSE OVER CALLED");
+          //   if (!this.state.showIcons) {
+          //     this.setState({ showIcons: true, firstClick: true });
+          //   }
+          // }}
           // tabIndex={0}
         >
           <p>EXPERIENCE</p>
