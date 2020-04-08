@@ -1,3 +1,10 @@
+.navbar-container {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+}
+
 .navbar {
   list-style-type: none;
   display: flex;

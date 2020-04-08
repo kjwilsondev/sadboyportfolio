@@ -14,30 +14,32 @@ class Navbar extends Component {
 
   render() {
     return (
-      <ul className="navbar">
-        <li>
-          <div
-            className={`menu-btn ${this.state.open}`}
-            onClick={() => {
-              if (this.state.open === "") {
-                this.setState({ open: "open" });
-              } else {
-                this.setState({ open: "" });
-              }
-            }}
-          >
-            <div class="menu-btn__burger"></div>
-          </div>
-        </li>
-        <li>
-          <FontAwesomeIcon
-            icon={faSadTear}
-            size="3x"
-            // onClick={() => history.push("/")}
-          />
-        </li>
-        <li></li>
-      </ul>
+      <div className="navbar-container">
+        <ul className="navbar">
+          <li>
+            <div
+              className={`menu-btn ${this.state.open}`}
+              onClick={() => {
+                if (this.state.open === "") {
+                  this.setState({ open: "open" });
+                } else {
+                  this.setState({ open: "" });
+                }
+              }}
+            >
+              <div class="menu-btn__burger"></div>
+            </div>
+          </li>
+          <li>
+            <FontAwesomeIcon
+              icon={faSadTear}
+              size="3x"
+              // onClick={() => history.push("/")}
+            />
+          </li>
+          <li></li>
+        </ul>
+      </div>
     );
   }
 }
