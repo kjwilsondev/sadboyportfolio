@@ -27,7 +27,7 @@ class Navbar extends Component {
                 }
               }}
             >
-              <div class="menu-btn__burger"></div>
+              <div className="menu-btn__burger"></div>
             </div>
           </li>
           <li>

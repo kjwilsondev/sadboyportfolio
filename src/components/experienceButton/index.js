@@ -9,18 +9,17 @@ class ExperienceButton extends Component {
     super(props);
     this.state = {
       showIcons: false,
-      firstClick: false,
-      onClickBrandCalled: false,
+      iconClick: false,
     };
   }
 
-  onClickBrand(e) {
+  onIconClick(e) {
     console.log("CLICKED");
-    if (this.state.firstClick && !this.state.onClickBrandCalled) {
-      console.log("FIRST CLICK: DONT OPEN");
+    if (this.state.showIcons && !this.state.iconClick) {
+      console.log("SHOW ICONS");
       console.log(e.target.tagName);
       e.preventDefault();
-      this.setState({ firstClick: false, onClickBrandCalled: true });
+      this.setState({ showIcons: false, iconClick: true });
     } else {
       console.log("NOT FIRST CLICK, please open");
     }
@@ -31,7 +30,7 @@ class ExperienceButton extends Component {
     const { instagram, soundcloud, hyperfollow } = this.props;
 
     console.log(
-      `showIcons: ${this.state.showIcons}, firstClick: ${this.state.firstClick}, onClickBrandCalled: ${this.state.onClickBrandCalled}`
+      `showIcons: ${this.state.showIcons}, iconClick: ${this.state.iconClick}`
     );
 
     // NOTE: onMouseOver and onMouseOut default to clicks for mobile, and hover on web
@@ -39,13 +38,13 @@ class ExperienceButton extends Component {
       return (
         <div
           className="expbutton"
-          // onMouseOver={(e) => {
-          //   console.log("PARENT ON MOUSE OVER CALLED");
-          //   if (!this.state.showIcons) {
-          //     this.setState({ showIcons: true, firstClick: true });
-          //   }
-          // }}
-          // tabIndex={0}
+          onFocus={(e) => {
+            console.log("PARENT ON MOUSE OVER CALLED");
+            if (!this.state.showIcons) {
+              this.setState({ showIcons: true, iconClick: true });
+            }
+          }}
+          tabIndex={0}
         >
           <p>EXPERIENCE</p>
         </div>
@@ -55,25 +54,24 @@ class ExperienceButton extends Component {
         <div
           className="expbutton"
           // onMouseOver={(e) => console.log(e.target.tagName)}
-          onMouseOut={(e) => {
-            console.log("CHILD ON MOUSE OUT CALLED");
-            console.log(e.target.tagName, typeof e.target.tagName);
-            if (e.target.tagName !== "svg" && e.target.tagName !== "path") {
-              // Handles edge case: button closes when svg tag is clicked
-              this.setState({
-                showIcons: false,
-                firstClick: false,
-                onClickBrandCalled: false,
-              });
-            }
-          }}
-          onBlur={() =>
+          // onMouseOut={(e) => {
+          //   console.log("CHILD ON MOUSE OUT CALLED");
+          //   console.log(e.target.tagName, typeof e.target.tagName);
+          //   if (e.target.tagName !== "svg" && e.target.tagName !== "path") {
+          //     // Handles edge case: button closes when svg tag is clicked
+          //     this.setState({
+          //       showIcons: false,
+          //       iconClick: false,
+          //     });
+          //   }
+          // }}
+          onBlur={() => {
+            console.log("big blur");
             this.setState({
               showIcons: false,
-              firstClick: false,
-              onClickBrandCalled: false,
-            })
-          }
+              iconClick: false,
+            });
+          }}
           // tabIndex={0}
         >
           {/* NOTE: These tabs will need a double click to work */}
@@ -83,7 +81,7 @@ class ExperienceButton extends Component {
                 <a
                   target="_blank"
                   href={instagram}
-                  onClick={(e) => this.onClickBrand(e)}
+                  onClick={(e) => this.onIconClick(e)}
                 >
                   <FontAwesomeIcon
                     className="ico"
@@ -98,7 +96,7 @@ class ExperienceButton extends Component {
                 <a
                   target="_blank"
                   href={soundcloud}
-                  onClick={(e) => this.onClickBrand(e)}
+                  onClick={(e) => this.onIconClick(e)}
                 >
                   <FontAwesomeIcon
                     className="ico"
@@ -113,7 +111,7 @@ class ExperienceButton extends Component {
                 <a
                   target="_blank"
                   href={hyperfollow}
-                  onClick={(e) => this.onClickBrand(e)}
+                  onClick={(e) => this.onIconClick(e)}
                 >
                   <FontAwesomeIcon className="ico" icon={faMusic} size="2x" />
                 </a>

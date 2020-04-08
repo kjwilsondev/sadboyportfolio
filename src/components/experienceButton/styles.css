@@ -1,9 +1,10 @@
 .expbutton {
-  border: 2px solid var(--color-black);
+  border: 2.25px solid var(--color-black);
+  border-radius: 2px;
   /* padding: 8px 15px; */
   margin: 15px;
   margin-bottom: 0px;
-  padding: 2px;
+  /* padding: 2px; */
   background-color: white;
   color: var(--color-offblack);
   font-weight: bold;
@@ -27,8 +28,8 @@
 .expbutton:active {
   /* color: white;
   background-color: var(--color-black); */
-  color: var(--color-black);
-  background-color: white;
+  color: white;
+  background-color: var(--color-black);
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 12px;
@@ -38,18 +39,35 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: stretch;
   justify-content: center;
   background-color: white;
   margin: 0px;
   padding: 0px;
+  width: 100%;
+}
+
+.icons li {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.icons li:hover {
+  background-color: var(--color-black);
+  color: white;
+}
+
+.icons li:hover .ico {
+  color: white;
+}
+
+.expbutton:active .ico {
+  font-size: 32px;
 }
 
 .ico {
   color: var(--color-black);
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
-
-/* .expbutton .brand-icon {
-} */
